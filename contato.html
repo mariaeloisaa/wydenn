@@ -4,9 +4,37 @@
          <title>Contato</title>
 	     <meta charset="utf=8">
 		 <link rel ="icon" type="image/jpg" href="img/icone.jpg"/>
-	
+		 <link rel="stylesheet" type="text/css" href="estilo.css">
+		 <script language="javascript" type="text/javascript">
     
-	 
+    function validar(){
+    
+    var nome = form3.nome.value;
+	var sobrenome = form3.sobrenome.value;
+    var email = form3.email.value;
+	
+    if (nome == "") 
+    {
+       alert('Por favor, Preencha o campo com seu nome');
+       form3.nome.focus();
+    return false;
+    }
+	    if (sobrenome == "") 
+    {
+       alert('Por favor, digite seu sobrenome');
+       form3.sobrenome.focus();
+    return false;
+    }
+    
+    if (email == "")
+    {
+       alert('Por favor, Preencha o campo com seu email');
+       form3.email.focus();
+    return false;
+    }
+	alert("seus dados foram enviados com sucesso");
+    }
+   </script>	 
 	</head>
 	<body>
      <div id="all">
@@ -46,17 +74,12 @@
                                                      
 						
 						mensagem:<div class="form-group">
-                     <textarea class="form-control" id="message" name="message" rows="5" placeholder="Mensagem: ">  </textarea>
-		     <br>
-		     <br>
-
-		     Alguma duvida? <input type="text" name"duvida">
-		     <br>
-		     <br>
-
-		     Comentarios: <input type="text" name"comentario">
+                     <textarea class="form-control" id="message" name="message" rows="5" placeholder="Mensagem: ">
                      </textarea>
                      </div>
+					 
+					 <input type="submit" onclick="return validar()" value="enviar">
+				     <input type="reset" name="limpa" value="limpar">
 					 
 				
                 </form>
@@ -66,5 +89,5 @@
              </a>
     </body>
 	<hr>
-	 <center><h5> Maria Eloisa &copy - todos os direitos reservados.</center></h5>
+	 <center><h5> Larissa Santos &copy - todos os direitos reservados.</center></h5>
 </html>
